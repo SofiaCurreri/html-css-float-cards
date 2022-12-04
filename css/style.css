@@ -1,60 +1,67 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: white;
     font-family: 'Fredoka', sans-serif;
 }
 
-.container{
+.container {
     margin: 0 auto;
     max-width: 1200px;
 }
 
-header{
-    color:rgb(212, 10, 78);
+h1 {
+    color: rgb(212, 10, 78);
     text-align: center;
+    margin-top: 20px;
 }
 
 .intro{
     margin-top: 30px;
+    margin-bottom: 30px;
     text-align: center;
 }
 
+.clearfix::after,
+.row::after
+{
+    content: '';
+    clear: both;
+    display: table;
+}
+
 .row{
-    margin-top: 20px;
-    /*text-align: justify;*/
-    color: white;
+    margin: 0 -20px;
 }
 
 .column{
-    display: inline-block;
-    width: 400px;
-    background-color: rgb(40, 0, 77);
-    line-height: 35px;
-}
-
-.left{
-    max-width: 30%;
+    width: calc(100% / 3);
+    padding: 20px;
     float: left;
 }
 
-.text-profile{
-    vertical-align: middle;
-    margin-left: 100px;
-    margin-top: 5px;
+.card{
+    background-color: black;
+    height: 110px;
+    color: white;
 }
 
-.clearfix::after,
-.row::after{
-    content: '';
-    clear: both;
-    display: block;
+.card-img,
+.card-img > img {
+    height: 100%;
+    float: left;
+    margin-right: 10px;
 }
 
-.email{
+.card-details{
+    padding: 10px;
+    line-height: calc(90px / 3);
+}
+
+a{
     color: rgb(15, 161, 251);
 }
